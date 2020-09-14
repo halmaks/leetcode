@@ -22,6 +22,7 @@ public class Solution2 {
                 {0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3},
                 {1, 0, 0, 0, 2, 2, 1, 1, 3, 3, 3, 2}
         };
+
         int indexOne = 0;
         int indexTwo = 0;
 
@@ -51,23 +52,23 @@ public class Solution2 {
                 j++;
             }
         }
-        String minutes;
+
         int minutesCaseOne = minutesDigits[0] * 10 + minutesDigits[1];
+        if (minutesCaseOne > MINUTES_MAX_VALUE) {minutesCaseOne = -1;}
         int minutesCaseTwo = minutesDigits[1] * 10 + minutesDigits[0];
-        if (minutesCaseOne >= minutesCaseTwo && minutesCaseOne <= MINUTES_MAX_VALUE) {
+        if (minutesCaseTwo > MINUTES_MAX_VALUE) {minutesCaseTwo = -1;}
+        if (minutesCaseOne >= minutesCaseTwo && minutesCaseOne >= 0) {
             if (minutesCaseOne < 10) {
                 return hours + ":0" + minutesCaseOne;
             } else {
                 return hours + ":" + minutesCaseOne;
             }
-        }
-        if (minutesCaseTwo <= MINUTES_MAX_VALUE) {
+        } else if (minutesCaseTwo >= 0) {
             if(minutesCaseTwo < 10) {
                 return hours + ":0" + minutesCaseTwo;
             } else {
                 return hours + ":" + minutesCaseTwo;
             }
-        }
-        return "";
+        } else return "";
     }
 }

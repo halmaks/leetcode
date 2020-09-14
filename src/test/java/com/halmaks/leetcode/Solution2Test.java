@@ -1,6 +1,5 @@
 package com.halmaks.leetcode;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -67,5 +66,12 @@ public class Solution2Test {
         String resultTime = solution2
                 .largestTimeFromDigits(new int[]{7, 3, 6, 0});
         Assert.assertEquals("07:36", resultTime);
+    }
+    @Test
+    public void largestTimeFromDigitsTest10() {
+        Solution2 solution2 = new Solution2();
+        String resultTime = solution2
+                .largestTimeFromDigits(new int[]{2, 0, 6, 6});
+        Assert.assertEquals("06:26", resultTime);
     }
 }
