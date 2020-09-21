@@ -14,7 +14,7 @@ public class LengthOfLastWord {
 
         for (int i = 1; i <= c.length; i++) {
             if (c[c.length - i] == ' ') {
-                if (i == 1 || spaces > 0) {
+                if (i == 1 || (spaces > 0 && i == spaces + 1)) {
                     spaces++;
                     continue;
                 }
@@ -22,8 +22,11 @@ public class LengthOfLastWord {
             }
             count = i;
         }
-
-        return count - spaces;
+        if ( count == 0) {
+            return count;
+        } else {
+            return count - spaces;
+        }
     }
 
 }

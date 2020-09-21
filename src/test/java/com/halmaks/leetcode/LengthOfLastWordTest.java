@@ -49,4 +49,9 @@ public class LengthOfLastWordTest{
         assertEquals(17, new LengthOfLastWord()
                 .lengthOfLastWord("  wordBetweenSpaces  "));
     }
+    @Test
+    public void lengthOfLastWordCase10() {
+        assertEquals(16, new LengthOfLastWord()
+                .lengthOfLastWord("  oneSpaceInTheEnd "));
+    }
 }
