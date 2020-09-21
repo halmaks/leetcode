@@ -1,10 +1,9 @@
 package com.halmaks.leetcode;
 
-import junit.framework.TestCase;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-public class LengthOfLastWordTest extends TestCase {
-
+public class LengthOfLastWordTest{
     @Test
     public void lengthOfLastWordCase1() {
         assertEquals(9, new LengthOfLastWord()
