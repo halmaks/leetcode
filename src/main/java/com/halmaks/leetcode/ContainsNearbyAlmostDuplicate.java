@@ -1,6 +1,6 @@
 package com.halmaks.leetcode;
 
-public class Solution {
+public class ContainsNearbyAlmostDuplicate {
     /*
     containsNearbyAlmostDuplicate:
     Given an array of integers, find out whether there are two distinct

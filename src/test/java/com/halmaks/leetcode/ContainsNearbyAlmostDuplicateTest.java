@@ -2,7 +2,7 @@ package com.halmaks.leetcode;
 
 import junit.framework.TestCase;
 
-public class SolutionTest extends TestCase {
+public class ContainsNearbyAlmostDuplicateTest extends TestCase {
 
     public void testContainsNearbyAlmostDuplicateCase1() {
 
