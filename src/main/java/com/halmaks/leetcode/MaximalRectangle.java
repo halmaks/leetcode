@@ -38,13 +38,14 @@ package com.halmaks.leetcode;
 public class MaximalRectangle {
 
     public int maximalRectangle(char[][] matrix) {
+
         if (matrix.length == 0) {
             return 0;
         }
-        if (matrix[0][0] == '1') {
+        if (matrix.length == 1 && matrix[0][0] == '1') {
             return 1;
         }
-        if (matrix[0][0] == '0') {
+        if (matrix.length == 1 && matrix[0][0] == '0') {
             return 0;
         }
 
@@ -53,6 +54,7 @@ public class MaximalRectangle {
         int j = 0;
         int horizontalCount = 0;
         int verticalCount = 0;
+        int maxRect = 0;
 
         for (i = 0; i < matrix.length; i++) {
             for (j = 0; j < matrix.length; j++) {
@@ -61,14 +63,22 @@ public class MaximalRectangle {
                     horizontalCount++;
                     continue;
                 } else {
+                    j = j - horizontalCount;
                     horizontalCount = 0;
+                    if (maxRect > horizontalCount) {
+                        maxRect = horizontalCount;
+                        break;
+                    }
+
+
                 }
             }
+            verticalCount++;
 
 
-            i++;
         }
 
+        result = maxRect;
 
         return result;
     }
